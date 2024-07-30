@@ -12,12 +12,12 @@ func check(err error) {
 }
 
 func main() {
-  pageServer := http.FileServer(http.Dir("./src"))
-  http.Handle("/", pageServer);
+  PageServer := http.FileServer(http.Dir("./src"))
+  http.Handle("/", PageServer);
 
   fmt.Println("Starting server at port 5088...")
 
-  startServer := http.ListenAndServe(":5088", nil)
+  StartServer := http.ListenAndServe(":5088", nil)
 
-  check(startServer)
+  check(StartServer)
 }
